@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+.hidden {
+            visibility: hidden;
+        }
+        .visible {
+            visibility: visible;
+            color: red;
+            margin-left: 5px;
+        }
+</style>
+<body>
+<label for="username">Username</label>
+    <input type="text" id="username"/> <span id="un_err" class="hidden">*</span>
+<br/>
+    <button onclick="check()">Check</button>
+    
+    <script src="form.js"></script>
+</body>
+</html>

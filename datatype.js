@@ -1,0 +1,12 @@
+let a = 15;
+let b = 12.8;
+let c = "JavaScript";
+let d = null;
+let e = true;
+let f = {};
+console.log(typeof(a));
+console.log(typeof(b));
+console.log(typeof(c));
+console.log(typeof(d));
+console.log(typeof(e));
+console.log(typeof(f));
