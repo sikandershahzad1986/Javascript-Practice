@@ -1,9 +1,11 @@
-let car ={
+let car = {
+name: "Vitz",
+model:2013,
+color:"White",
 
-    name:"Vitz",
-    color:"Whte",
-    model:2013,
-}
 
-let {name: nm} = car;
+};
+
+let {name:nm} = car;
 console.log(nm);
+
