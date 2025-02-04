@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+<body>
+          
+    <div class="parent">
+        <div class="child">Monday</div>
+        <div class="child">Tuesday</div>
+        <div class="child">Wednesday</div>
+        <div class="child">Thursday</div>
+        <div class="child">Friday</div>
+        <div class="child">Saturday</div>
+        <div class="child">Sunday</div>
+  </div>
+
+  <div>
+<ul id="ul_div">
+<li>JavaScript</li>
+</ul>
+</div>
+        
+<script>
+
+function addLanguage(lang)
+{
+  const li = document.createElement('li');
+  li.innerHTML = `${lang}`;
+  document.getElementById('ul_div').appendChild(li);
+}
+
+addLanguage("php");
+addLanguage("Python");
+
+
+let pt = document.querySelector('.parent');
+console.log(pt);
+console.log(pt.firstElementChild.innerHTML);
+console.log(pt.lastElementChild.innerHTML);
+console.log(pt.firstElementChild.nextElementSibling.innerHTML);
+
+
+
+let childs = document.querySelectorAll('.child');
+let childsArray = Array.from(childs);
+console.log(childsArray);
+childsArray.forEach( function (element,i)
+{
+console.log(element.innerHTML , i);
+if(i === 0)
+{
+  element.style.color= "Red";
+}
+
+}
+);
+
+
+
+
+
+
+</script>   
+
+</body>
+</html>
