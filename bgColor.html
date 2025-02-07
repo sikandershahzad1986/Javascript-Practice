@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Divs</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: 1px solid black;
+          
+        }
+       #color1 { background-color: #FF5733; }
+       #color2 { background-color: #33FF57; }
+       #color3 { background-color: #3357FF; }
+       #color4 { background-color: #F39C12; }
+       #color5 { background-color: #8E44AD; }
+    </style>
+</head>
+<body>
+    <h1>Background Changer Project</h1>
+    <div class="container">
+        <div class="box" id="color1"></div>
+        <div class="box" id="color2"></div>
+        <div class="box" id="color3"></div>
+        <div class="box" id ="color4"></div>
+        <div class="box" id="color5"></div>
+    </div>
+</body>
+
+<script>
+
+let boxes = document.querySelectorAll('.box');
+let body = document.querySelector("body");
+//console.log(boxes);
+
+boxes.forEach(function (box) {
+    box.addEventListener('click', function (e) {
+        console.log(e);
+        
+        console.log(e.target);
+        if (e.target.id === "color1")
+    {
+        body.style.backgroundColor = '#FF5733';   
+    }
+    if (e.target.id === "color2")
+    {
+        body.style.backgroundColor = 'green';   
+    }
+
+
+
+    })
+})
+
+
+</script>
+</html>

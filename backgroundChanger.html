@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Divs</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: 1px solid black;
+          
+        }
+        #red { background-color: #FF5733; }
+        #green { background-color: #33FF57; }
+        #blue { background-color: #3357FF; }
+        #orange { background-color: #F39C12; }
+        #purple { background-color: #8E44AD; }
+    </style>
+</head>
+<body>
+    <h1>Background Changer Project</h1>
+    <div class="container">
+        <div class="box" id="red"></div>
+        <div class="box" id="green"></div>
+        <div class="box" id="blue"></div>
+        <div class="box" id="orange"></div>
+        <div class="box" id="purple"></div>
+    </div>
+</body>
+
+<script>
+
+const boxes = document.querySelectorAll('.box');
+const body = document.querySelector('body');
+console.log(boxes);
+boxes.forEach( function (box){
+console.log(box);
+box.addEventListener("click", function(e){
+if(e.target.id === "red")
+{
+body.style.backgroundColor = e.target.id;
+}
+if(e.target.id === "green")
+{
+body.style.backgroundColor = e.target.id;
+}
+if(e.target.id === "purple")
+{
+body.style.backgroundColor = e.target.id;
+}
+if(e.target.id === "orange")
+{
+body.style.backgroundColor = e.target.id;
+}
+if(e.target.id === "blue")
+{
+body.style.backgroundColor = e.target.id;
+}
+
+
+
+})
+
+
+
+
+});
+
+
+</script>
+</html>
