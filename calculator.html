@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+/* Styling the container div */
+.form-container {
+    width: 300px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Styling the text inputs */
+
+.form-container input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* Hover and focus effects */
+
+.form-container input[type="number"]:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+/* Styling the submit button */
+.form-container input[type="submit"] {
+    width: 95%;
+    padding: 12px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #218838;
+}
+#display{font-weight: bold; color:#28a745;font-size: large;}
+
+
+</style>
+<body>
+    <div class="form-container">
+    <form>
+        <input type="number" id="first">
+        <input type="number" id="second">
+        <input type="submit" value="Calculate">
+
+    </form>
+    <div id="display"></div>
+    </div>
+   
+</body>
+
+<script>
+const form = document.querySelector('form');
+form.addEventListener("submit",function(e){
+    e.preventDefault();
+
+let firstVal= parseInt(document.getElementById('first').value);
+let secVal= parseInt(document.getElementById('second').value);
+let result= firstVal+secVal;
+document.getElementById('display').innerHTML = result;
+
+
+});
+
+
+</script>
+</html>

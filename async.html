@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Program</title>
+</head>
+<body>
+<h1>Sikander Shahzad</h1>
+<button>Stop</button>
+</body>
+<script>
+
+let after3second = function(){
+document.querySelector('h1').innerHTML = "JavaScript";
+document.body.style.backgroundColor = "yellow";
+}
+
+const changeMe = setTimeout(after3second,3000);
+document.querySelector('button').addEventListener("click",function(){
+clearTimeout(changeMe);
+console.log("Time Stoped")
+
+});
+
+
+</script>
+</html>

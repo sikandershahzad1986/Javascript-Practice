@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeout</title>
+</head>
+<body>
+    <h2>I will be changed to "JavaScript" after 3 seconds, 
+        if you want to stop me changing click on the 
+        button below:
+    </h1>
+    <button style="width: 100px; padding: 10px; background-color: grey;">Stop</button>
+    <div id="dis"></div>
+</body>
+
+<script>
+
+let after3second = () => {
+document.querySelector('h2').innerHTML = "JavaScript";
+};
+let changeMe = setTimeout(after3second, 3000);
+
+document.querySelector('button').addEventListener('click',function(){
+clearTimeout(changeMe);
+let display = document.querySelector('#dis').innerHTML = "You clicked stop button so paragraph will not be changed."
+
+setTimeout(function(){
+document.querySelector('#dis').innerHTML = "";
+
+},2000);
+
+});
+
+
+</script>
+</html>

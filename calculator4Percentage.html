@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="obt" min="0"/>
+        <input type="number" id="tot" min="1">
+        <input type="submit" values="Calculate">
+    </form>
+    <div id="display"></div>
+</body>
+<script>
+
+let form = document.querySelector("form");
+
+form.addEventListener("submit",function(e){
+e.preventDefault();
+let obt = document.getElementById('obt').value;
+let tot = document.getElementById('tot').value;
+
+let result = ((obt/tot)*100).toFixed(2);
+document.getElementById('display').innerHTML = result;
+
+
+});
+
+</script>
+</html>

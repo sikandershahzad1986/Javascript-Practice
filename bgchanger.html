@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Divs</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+            color: white;
+            font-size: 18px;
+        }
+        #red { background-color: red; }
+        #green { background-color: green; }
+        #blue { background-color: blue; }
+        #yellow { background-color: yellow; color: black; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+<div id="red" class="box" onclick="changeBG('red')">Red</div>
+<div id="green" class="box" onclick="changeBG('green')">Green</div>
+<div id="blue" class="box" onclick="changeBG('blue')">Blue</div>
+<div id="yellow" class="box" onclick="changeBG('yellow')">Yellow</div>
+</div>
+</body>
+<script>
+    function changeBG(color)
+    {
+        document.querySelector("body").style.backgroundColor = color;
+    }
+</script>
+</html>
