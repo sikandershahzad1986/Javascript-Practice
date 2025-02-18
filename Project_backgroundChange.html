@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.box{
+    width: 50px;
+    margin-bottom:5px;
+    text-align: center;
+    padding:20px;
+    color:white;
+    font-weight: bold;
+
+}
+#red{background-color: red;}
+#green{background-color: green;}
+#blue{background-color: blue;}
+#purple{background-color: purple;}
+</style>
+<body>
+    
+<div id="container">
+<div id="red" class="box">Red</div>
+<div id="green" class="box">Green</div>
+<div id="blue" class="box">Blue</div>
+<div id="purple" class="box">Purple</div>
+</div>
+
+</body>
+
+<script>
+let boxes = document.querySelectorAll('.box');
+
+boxes.forEach(function(box){
+    box.addEventListener("click",function(e){
+
+if(e.target.id === "red")
+{
+    document.body.style.backgroundColor = "red";
+}
+if(e.target.id === "green")
+{
+    document.body.style.backgroundColor = "green";
+}
+
+if(e.target.id === "blue")
+{
+    document.body.style.backgroundColor = "blue";
+}
+if(e.target.id === "purple")
+{
+    document.body.style.backgroundColor = "purple";
+}
+
+
+})
+
+
+
+
+})
+
+
+
+
+</script>
+</html>

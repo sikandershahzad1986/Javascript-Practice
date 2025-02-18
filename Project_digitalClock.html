@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Div</title>
+    <style>
+  body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        }
+     </style>
+</head>
+<body>
+<div id="time"></div>
+
+<button id="start" style="background-color:green; padding:10px; color:white;width: 80px;">Start</button>
+<button id="stop" style="background-color: red; padding:10px; color:white;width: 80px;">Stop</button>
+</body>
+<script>
+
+
+let startClock = () => {
+    let dt = new Date();
+document.getElementById('time').innerHTML = dt.toLocaleTimeString();
+   
+};
+
+//setInterval(startClock, 1000);
+
+let IntervalId;
+document.querySelector("#start").addEventListener("click",function(){
+IntervalId = setInterval(startClock,1000);
+console.log("You started clock");
+});
+
+
+document.querySelector("#stop").addEventListener("click",function(){
+clearInterval(IntervalId);
+console.log("you stopped the clock");
+
+});
+
+</script>
+</html>

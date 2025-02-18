@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer Project</title>
+</head>
+<style>
+#red{background-color: red;padding:10px; margin-bottom: 5px; width: 50px;}
+#mahroon{background-color: maroon; padding:10px; margin-bottom: 5px; width: 50px;}
+#blue{background-color: blue;padding:10px; margin-bottom: 5px; width: 50px;}
+#green{background-color: green;padding:10px; margin-bottom: 5px; width: 50px;}
+</style>
+<body>
+    <div id="container">
+
+        <div id="red" onclick="changeColor('red')">Red</div>
+        <div id="green" onclick="changeColor('green')">Green</div>
+        <div id="blue" onclick="changeColor('blue')">Blue</div>
+        <div id="mahroon" onclick="changeColor('maroon')">Mahroon</div>
+
+
+
+    </div>
+</body>
+
+<script>
+
+
+function changeColor(color)
+{
+
+    document.body.style.backgroundColor = color;
+}
+
+
+
+</script>
+</html>

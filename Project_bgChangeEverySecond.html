@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Background change</title>
+</head>
+<body>
+    <p>Click on Start Button to start changing background color every second and Stop Button to stop.</p>
+    <button id="stop" style="padding:10px; width:100px; background-color: red; color:white;">Stop</button>
+    <button id="start" style="padding:10px; width:100px; background-color: green; color:white;">Start</button>
+</body>
+
+<script>
+
+function backgroundColor()
+{
+    let hex ='0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+ color += hex[(Math.floor(Math.random()*16))];
+     }
+     return color;
+}
+
+
+
+startChanging = () => {
+    document.body.style.backgroundColor = backgroundColor();  
+}
+
+let intervalId;
+document.querySelector('#start').addEventListener("click",function(){
+
+if(!intervalId){
+
+intervalId = setInterval(startChanging, 1000);
+}
+});
+
+
+document.querySelector('#stop').addEventListener('click',function(){
+clearInterval(intervalId);
+intervalId = null;
+});
+
+
+</script>
+</html>
