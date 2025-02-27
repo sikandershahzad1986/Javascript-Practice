@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="number" id="fn">
+        <input type="number" id="sn">
+        <input type="submit" value="Calculate">
+        <div id="display"></div>
+    </form>
+    <div id="colors">
+        <div id="red" class="box">Red</div>
+        <div id="green" class = "box">Green</div>
+        <div id="blue" class = "box">Blue</div>
+        <div id="purple" class="box">Purple</div>
+    </div>
+</body>
+<script>
+ let fm = document.querySelector("form");
+let body = document.querySelector("body");
+
+ fm.addEventListener("click",function(e){
+e.preventDefault();
+let n1 = Number(document.querySelector("#fn").value);
+let n2 = Number(document.querySelector("#sn").value);
+let result = n1+n2
+document.querySelector("#display").innerHTML = result;
+ })
+
+let boxes = document.querySelectorAll(".box");
+boxes.forEach(function(box){
+
+    box.addEventListener("click",function(e){
+        if(e.target.id === 'red')
+    {
+        body.style.backgroundColor = e.target.id;
+    }
+    if(e.target.id === 'green')
+    {
+        body.style.backgroundColor = e.target.id;
+    }
+    if(e.target.id === 'blue')
+    {
+        body.style.backgroundColor = e.target.id;
+    }
+    if(e.target.id === 'purple')
+    {
+        body.style.backgroundColor = e.target.id;
+    }
+
+    })
+
+})
+
+</script>
+</html>

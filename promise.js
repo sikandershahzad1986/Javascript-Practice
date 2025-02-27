@@ -1,41 +1,50 @@
-const promise1 = new Promise(function(resolve,reject){
+// let promise1 = new Promise(function(resolve,reject){
+//     let success = false;
+//     if (success) {
+//         resolve({user:"bac",pass:123});
+//     }
+//     else{
+//         console.log("Data not received");
+        
+//     }
+// });
 
-setTimeout(function(){
-
-    console.log("Task");
-    resolve();
+// promise1
+// .then(function(suc){
+//     console.log(suc);
     
-},1000)
+// })
+// .catch(function(err)
+// {
+//     console.log(err);
+    
+// })
 
 
+let promise2 = new Promise(function(resolve,reject){
+    let suc = false;
+    if (suc) {
+        console.log("fulfilled");
+        
+    }
+    else{
+        console.log("Rejected");
+        
+    }
 });
 
-promise1.then(function(){
+async function getData()
+{
 
-    console.log('Task accomplished');
+try {
+    let response = await promise2;
+    console.log(response);
+} catch (error) {
+    console.log(error);
     
-})
-
-
-const promise2 = new Promise(function(resolve,reject){
-let task = false;
-if(task)
-{
-    resolve('Accomplished');
-}
-else
-{
-    reject('Not accomplished');
 }
 
 
-});
-
-promise2.then(function(msg){
-    console.log(msg);
-})
-
-.catch(function(err){
-    console.log(err);
     
-})
+    
+}
