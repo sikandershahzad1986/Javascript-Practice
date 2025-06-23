@@ -73,4 +73,4 @@ let spread_array = [...arr, ...arr1];
 fruits.forEach(function(f){
     console.log(f);
     
-}
+})
